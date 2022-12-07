@@ -5,8 +5,6 @@ class SwiftTestCodecov < Formula
   sha256 "64ca845430b2995ae0f788b85ffd0279e233b05a14592acad48ef6216f54d43d"
   head "https://github.com/edelabar/swift-test-codecov.git"
 
-  depends_on xcode: ["14.1", :build]
-
   def install
     system "make", "install", "prefix=#{prefix}"
   end
