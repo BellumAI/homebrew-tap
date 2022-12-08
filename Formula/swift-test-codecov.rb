@@ -1,11 +1,21 @@
 class SwiftTestCodecov < Formula
-  desc "Swift test --enable-code-coverage result parser for use in CI/CD workflows"
+  desc "Simple executable to produce code coverage numbers from the output of `swift test --enable-code-coverage`"
   homepage "https://github.com/mattpolzin/swift-test-codecov"
-  url "https://github.com/mattpolzin/swift-test-codecov/archive/refs/tags/0.11.3.tar.gz"
-  sha256 "4d258c47f7038ce4735d288eeb014c954b8dee7ab57274323f04e37c9e3988bc"
-  head "https://github.com/mattpolzin/swift-test-codecov.git"
-  
+  url "https://github.com/edelabar/swift-test-codecov.git",
+      tag:      "0.11.4-beta1",
+      revision: "20f369c6a326d287e50756a2d599bd1fd0edb8f0"
+  head "https://github.com/edelabar/swift-test-codecov.git"
+  license "MIT"
+
+#   depends_on xcode: ["14.0", :build]
+# 
+#   uses_from_macos "swift"
+
   def install
     system "make", "install", "prefix=#{prefix}"
+  end
+  
+  test do
+    system "#{bin}/swift-test-codecov" "--help"
   end
 end
