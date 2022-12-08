@@ -2,8 +2,8 @@ class SwiftTestCodecov < Formula
   desc "Simple executable to produce code coverage numbers from the output of `swift test --enable-code-coverage`"
   homepage "https://github.com/mattpolzin/swift-test-codecov"
   url "https://github.com/edelabar/swift-test-codecov.git",
-      tag:      "0.11.4-beta1",
-      revision: "20f369c6a326d287e50756a2d599bd1fd0edb8f0"
+      tag:      "0.11.4-beta2",
+      revision: "3fde7bbe7de4742c0bcfa923be337472ffa729a5"
   head "https://github.com/edelabar/swift-test-codecov.git"
   license "MIT"
 
